@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("https://blogs-images.forbes.com/karlaalindahao/files/2016/10/Worlds-50-Best-Bars-2016_Dead-Rabbit-New-York_02-1200x675.jpg");
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow: hidden;
+
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  color: #E0B468;
+  font-size: 4em;
+  list-style: none;
+  padding-top: 3%;
+  -webkit-text-stroke: 2px black;
+  position: center;
+
+}
+
+.enter_button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 2%;
+}
+
+.enter_container {
+  height: 100vh;
+  width: 100vw;
+}
+
+#map_container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  padding-top: 3%;
+}
+
+#map {
+  
+  height: 400px;
+  width: 50%;
+  border: 4px solid #340D00;
+  border-radius: 5%;
+  box-shadow: 0 0 3pt #340D00;
+  padding: 4%;
+
+
+}
+
+#specials_container {
+  display: flex;
+  justify-content: center;
+
+}
