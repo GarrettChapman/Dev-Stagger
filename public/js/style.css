@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("https://blogs-images.forbes.com/karlaalindahao/files/2016/10/Worlds-50-Best-Bars-2016_Dead-Rabbit-New-York_02-1200x675.jpg");
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow: hidden;
+
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  /*color: #E0B468;*/
+  color: #9C0500;
+  font-size: 4em;
+  list-style: none;
+  padding-top: 2%;
+  -webkit-text-stroke: 2px #E0B468;
+  position: center;
+
+}
+
+.enter_button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 2%;
+}
+
+.enter_container {
+  height: 100vh;
+  width: 100vw;
+}
+
+#map_container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  padding-top: 3%;
+}
+
+#map {
+
+  height: 400px;
+  width: 50%;
+  border: 4px solid #340D00;
+  border-radius: 5%;
+  box-shadow: 0 0 5pt #340D00;
+  padding: 4%;
+
+  /*transition: 2s;
+    -webkit-transition: 2s;
+    border-color: #9C0500;
+    outline-color: #9C0500;
+    box-shadow: 0 0 2pt 2pt #9C0500;*/
+
+
+}
+
+#specials_container {
+  display: flex;
+  justify-content: center;
+
+}
+
+.submit_input {
+  text: white;
+  position: inherit;
+
+}
+
+input {
+text-align: center;
+transition: 2s;
+  -webkit-transition: 2s;
+  border-color: #9C0500;
+  outline-color: #9C0500;
+  box-shadow: 0 0 2pt 2pt #9C0500;
+
+}
+
+
+
+h2 {
+
+  color: #9C0500;
+  -webkit-text-stroke: .5px #E0B468;
+}
+
+h5 {
+  color: white;
+  padding: px;
+}
+
+table {
+
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  background-color: #E0B468;
+  color: #010302;
+  font-size: 3em;
+  /*border: 2px solid #E0B468;*/
+  -webkit-text-stroke: 2px #9C0500;
+  opacity: 0.8;
+  border-collapse: collapse;
+  margin: 0px auto;
+}
+
+th {
+
+  padding: 30px;
+  border: 2px solid black;
+}
+
+td {
+  border: 2px solid black;
+  padding-left: 4%;
+}
+
+/*form {
+  display: flex;
+  justify-content: center;
+
+}*/

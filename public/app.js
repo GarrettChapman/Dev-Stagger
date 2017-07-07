@@ -1,0 +1,35 @@
+angular.module('myApp', ["ui.router"])
+
+  // .controller('controller', function($scope){
+  //   $scope.test = "Most Triumphant"
+
+  .config(function($stateProvider, $urlRouterProvider) {
+    $stateProvider
+      .state('home', {
+        url: '/',
+        templateUrl: "./js/views/home.html",
+        controller: "mainCtrl"
+
+      })
+
+      .state('specials', {
+        url: '/specials',
+        templateUrl: './js/views/specials.html',
+        controller: 'specialsCtrl'
+      })
+
+      .state('map', {
+        url: '/map' ,
+        templateUrl: './js/views/map.html',
+        controller: 'mapCtrl'
+      })
+
+      .state('submit', {
+        url: '/submit',
+        templateUrl: './js/views/submit.html',
+        controller: 'submitCtrl'
+      })
+
+    $urlRouterProvider
+      .otherwise('/');
+  })
