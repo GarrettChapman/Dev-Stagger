@@ -1,4 +1,4 @@
-angular.module('myApp', ["ui.router"])
+angular.module('myApp', ["ui.router", 'ui.grid'])
 
   // .controller('controller', function($scope){
   //   $scope.test = "Most Triumphant"
