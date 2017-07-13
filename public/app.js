@@ -19,7 +19,7 @@ angular.module('myApp', ["ui.router", 'ui.grid'])
       })
 
       .state('map', {
-        url: '/map' ,
+        url: '/map/' ,
         templateUrl: './js/views/map.html',
         controller: 'mapCtrl'
       })
@@ -28,6 +28,12 @@ angular.module('myApp', ["ui.router", 'ui.grid'])
         url: '/submit',
         templateUrl: './js/views/submit.html',
         controller: 'submitCtrl'
+      })
+
+      .state('moreInfo', {
+        url: '/moreInfo/:id' ,
+        templateUrl: './js/views/map.html',
+        controller: 'mapCtrl'
       })
 
     $urlRouterProvider

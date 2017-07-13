@@ -4,7 +4,9 @@ angular.module("myApp").service("mapSrv", function ($http) {
   this.getYelpData = function(){
     return $http.get('/bars')
   }
-
+this.getOneLocation = function(id){
+  return $http.get('/api/bar/'+ id)
+}
 
   // (function map() {
   //   var dallas = {lat: 32.7767, lng: -96.7970};

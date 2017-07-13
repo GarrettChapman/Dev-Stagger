@@ -1,1 +1,1 @@
-SELECT * FROM bars_table;
+SELECT * FROM bars_table WHERE bar_id = $1;

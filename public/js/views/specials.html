@@ -1,45 +1,42 @@
+<nav class="nav">
+  <button ui-sref="home" class="button">-Home-</button>
+  <button ui-sref="map" class="button">-All Locations-</button>
+  <button ui-sref="submit" class="button">-Submit-</button>
+</nav>
+
+
+<!-- <div class="">
+  <button ui-sref="home" class="button">-Home-</button>
+  <button ui-sref="map" class="button">-Locations-</button>
+  <button ui-sref="submit" class="button">-Submit-</button>
+</div> -->
+
+<!--
 <div class="">
-  <button ui-sref="home" class="button">-HOME-</button>
+  <button ui-sref="map" class="button">-Locations-</button>
 </div>
 
-
 <div class="">
-  <button ui-sref="map" class="button">-View All Locations-</button>
+  <button ui-sref="submit" class="button">-Submit-</button>
+</div> -->
+
+<h1 class="header" >Specials</h1>
+
+
+<!-- <div ui-grid="{ data: myData.bar_name }" class="myGrid"></div> -->
+
+<!-- <div ui-grid="{ data: myData }" class="myGrid"></div> -->
+
+<div class="divScroll">
+  <ul ng-repeat="data in myData">
+    <h1>{{data.bar_name}}</h1><br>
+    <!-- <button ui-sref='moreInfo({id:data.bar_id})' class="" name="button" placeholder=>Location</button><br> -->
+      <li>{{data.specials}}</li><br>
+      <!-- <li>{{data.review}}</li><br> -->
+     <button ui-sref='moreInfo({id:data.bar_id})' class="button" name="button" placeholder=>-Location-</button>
+    <br>
+    <br>
+    <br>
+    <br>
+  </ul>
 </div>
-
-<div class="">
-  <button ui-sref="submit" class="button">-SUBMIT-</button>
-</div>
-
-<h1 class="header">Specials</h1>
-
-
-<div ui-grid="{ data: myData }" class="myGrid"></div>
-
-
-<!-- <table align="center">
-  <tr>
-    <th> Rating </th>
-    <th>Bar Name</th>
-    <th>Drink Specials</th>
-    <th>Find Location</th>
-  </tr>
-  <tr>
-    <td>Table cell</td>
-    <td>Table cell</td>
-    <td>Table cell</td>
-    <td>Table cell</td>
-  </tr>
-  <tr>
-    <td>Table cell</td>
-    <td>Table cell</td>
-    <td>Table cell</td>
-    <td>Table cell</td>
-  </tr>
-  <tr>
-    <td>Table cell</td>
-    <td>Table cell</td>
-    <td>Table cell</td>
-    <td>Table cell</td>
-  </tr>
-</table> -->

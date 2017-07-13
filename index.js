@@ -28,9 +28,9 @@ app.use(json())
 //   req.app.get('db').run('insert into bars_table (bar_name, street, city, zip, specials, rating, review) values ($1, $2, $3, $4, $5, $6, $7)', [req.body.barName, req.body.street, req.body.city, req.body.zip, req.body.specials, req.body.rating, req.body.review]);
 // })
 
-app.get("/api/bar", function(req, res, next) {
+app.get("/api/bar/:id", function(req, res, next) {
   var db = req.app.get('db')
-  db.findBar()
+  db.findBar(req.params.id)
     .then(response => {
       console.log(response)
       return res.status(200).json(response);
@@ -39,7 +39,6 @@ app.get("/api/bar", function(req, res, next) {
       console.log(err)
       return res.status(500).json(err)
     })
-
 })
 
 app.put("/api/bar", function(req, res, next) {
@@ -93,15 +92,14 @@ app.delete('/api/bar/:bar_id', function(req, res, next) {
 app.get('/bars', (req, res, next) => {
 
   req.app.get('db')
-    .findBar()
+    .findBars()
     .then(function(specials){
       return res.status(200).json(specials)
     })
     .catch(function(err){
       return res.status(500).json(err)
     })
-  // yelp.get(`https://api.yelp.com/v3/businesses/search?term=bars&location=${req.query.location}`)
-  // yelp.get(`https://api.yelp.com/v3/businesses/search?term=bars&location=75202,75201&limit=50`)
+ yelp.get(`https://api.yelp.com/v3/businesses/search?term=bars&location=75202,75201&limit=50`)
   //   .then(results => {
   //     // console.log("this is a test", results)
   //     res.send(results.data)
