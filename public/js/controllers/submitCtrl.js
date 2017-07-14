@@ -1,4 +1,4 @@
-angular.module("myApp").controller("submitCtrl", function($scope,submitSrv){
+angular.module("myApp").controller("submitCtrl", function($scope,$state,submitSrv){
   $scope.submit = function(form){
     var geocoder = new google.maps.Geocoder();
       geocoder.geocode({'address': `${$scope.form.street} ${$scope.form.city} Texas ${$scope.form.zip}`}, function(results, status) {
@@ -7,6 +7,7 @@ angular.module("myApp").controller("submitCtrl", function($scope,submitSrv){
         console.log(submitSrv);
         submitSrv.submitForm(form).then(function(response){
           console.log(response);
+          $state.go("specials")
         })
       });
 

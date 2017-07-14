@@ -1,24 +1,17 @@
-<nav class="nav">
+<!-- <nav class="nav">
   <button ui-sref="home" class="button">-Home-</button>
   <button ui-sref="map" class="button">-All Locations-</button>
   <button ui-sref="submit" class="button">-Submit-</button>
-</nav>
+</nav> -->
 
 
-<!-- <div class="">
+<div class="nav">
   <button ui-sref="home" class="button">-Home-</button>
   <button ui-sref="map" class="button">-Locations-</button>
   <button ui-sref="submit" class="button">-Submit-</button>
-</div> -->
-
-<!--
-<div class="">
-  <button ui-sref="map" class="button">-Locations-</button>
 </div>
 
-<div class="">
-  <button ui-sref="submit" class="button">-Submit-</button>
-</div> -->
+
 
 <h1 class="header" >Specials</h1>
 
@@ -31,12 +24,13 @@
   <ul ng-repeat="data in myData">
     <h1>{{data.bar_name}}</h1><br>
     <!-- <button ui-sref='moreInfo({id:data.bar_id})' class="" name="button" placeholder=>Location</button><br> -->
-      <li>{{data.specials}}</li><br>
+      <li ng-repeat="special in data.specials">{{special}}</li><br>
       <!-- <li>{{data.review}}</li><br> -->
-     <button ui-sref='moreInfo({id:data.bar_id})' class="button" name="button" placeholder=>-Location-</button>
+     <button ui-sref='moreInfo({id:data.bar_id})' class="button" name="button" placeholder=>-Location-</button><br><br><br>
+     <!-- <button ui-sref='moreInfo({id:data.bar_id})' class="button" name="button" placeholder=>-Add Review-</button> -->
     <br>
     <br>
     <br>
-    <br>
+    
   </ul>
 </div>

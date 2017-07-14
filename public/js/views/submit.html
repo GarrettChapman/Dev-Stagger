@@ -1,8 +1,17 @@
 <nav class="nav">
   <button ui-sref="home" class="button">-Home-</button>
   <button ui-sref="map" class="button">-All Locations-</button>
-  <button ui-sref="submit" class="button">-Submit-</button>
+  <button ui-sref="specials" class="button">-Specials-</button>
 </nav>
+
+<!-- <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn" ></button>
+  <div id="myDropdown" class="dropdown-content">
+    <a ui-sref="home">Home</a>
+    <a ui-sref="map">All Locations</a>
+    <a ui-sref="specials">Specials</a>
+  </div>
+</div> -->
 
   <h1 class="header">SUBMIT BAR</h1>
   <!-- <form  action="index.html" method="post"> -->
@@ -45,7 +54,9 @@
     <textarea ng-model="form.review" name="name" rows="6" cols="80" placeholder=""></textarea></center>
     <br>
 
-    <button ng-click="submit(form)" ui-sref="specials" class="button" type="submit" name="submit_button" onClick=''>SUBMIT</button></center>
+    <h3 ng-click="submit(form)" class="button" type="submit" name="submit_button">SUBMIT</h>
+
+    <!-- <button ng-click="submit(form)" ui-sref="specials" class="button" type="submit" name="submit_button">SUBMIT</button> -->
   </div>
 
 </div>

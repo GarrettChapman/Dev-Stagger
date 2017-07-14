@@ -31,9 +31,9 @@ app.use(json())
 app.get("/api/bar/:id", function(req, res, next) {
   var db = req.app.get('db')
   db.findBar(req.params.id)
-    .then(response => {
-      console.log(response)
-      return res.status(200).json(response);
+    .then(bars => {
+      var formattedBars = formatBars(bars)
+      return res.status(200).json(formattedBars);
     })
     .catch(err => {
       console.log(err)
@@ -56,11 +56,18 @@ app.put("/api/bar", function(req, res, next) {
 
 app.post("/api/form", function(req, res, next) {
   var db = req.app.get('db')
-  db.insertBar([req.body.barName, req.body.street, req.body.city, req.body.zip, req.body.specials, req.body.rating, req.body.review, req.body.lat, req.body.lng])
-    .then(response => {
-      console.log(response)
-      return res.status(200).json(response)
+  db.insertBar([req.body.barName, req.body.street, req.body.city, req.body.zip, req.body.rating, req.body.lat, req.body.lng])
+    .then(bars => {
+      var bar = bars[0]
+      return Promise.all([
+        db.insertReview([bar.bar_id, req.body.review]),
+        db.insertSpecial([bar.bar_id, req.body.specials])
+      ])
     })
+    .then(function() {
+      res.status(200).json("Success!")
+    })
+      // return res.status(200).json(bars)
     .catch(err => {
       // console.log(err)
       return res.status(500).json(err)
@@ -93,8 +100,9 @@ app.get('/bars', (req, res, next) => {
 
   req.app.get('db')
     .findBars()
-    .then(function(specials){
-      return res.status(200).json(specials)
+    .then(function(bars){
+      var formattedBars = formatBars(bars)
+      return res.status(200).json(formattedBars)
     })
     .catch(function(err){
       return res.status(500).json(err)
@@ -119,3 +127,29 @@ app.get('/bars', (req, res, next) => {
 app.listen(port, function() {
   console.log('working?')
 })
+
+function formatBars(bars) {
+  var formattedBars = []
+  for (var bar of bars) {
+    var found = false;
+    for (var formattedBar of formattedBars) {
+      if (formattedBar.bar_id === bar.bar_id) {
+        if (formattedBar.reviews.indexOf(bar.review) === -1) {
+          formattedBar.reviews.push(bar.review)
+        }
+        if (formattedBar.specials.indexOf(bar.special) === -1) {
+          formattedBar.specials.push(bar.special)
+        }
+        found = true;
+      }
+    }
+    if (!found) {
+      bar.reviews = [bar.review]
+      bar.specials = [bar.special]
+      delete bar.review
+      delete bar.special
+      formattedBars.push(bar)
+    }
+  }
+  return formattedBars
+}

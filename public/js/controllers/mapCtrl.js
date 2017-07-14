@@ -143,15 +143,25 @@ var homeMarker = 'https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/compu
     });
     // console.log(response);
     response.forEach(function(cur) {
-      var markerContent = `<h1>${cur.bar_name}</h1><br>
+      var specials = ""
+      var reviews = ""
+      for (var special of cur.specials) {
+          specials +=  '<p><small><i>' + special + '</i></small></p><br>'
+      }
 
-      <p>Specials: ${cur.specials}</p><br>
-      <p>Review: ${cur.review}</p><br>
-      <p>Rating: ${cur.rating}</p>`
+      for (var review of cur.reviews) {
+        reviews +=  '<p><small><i>' + review + '</i></small></p><br>'
+      }
+      var markerContent = `<h1>${cur.bar_name}</h1><br>
+      <p>SPECIALS:</p><br>
+      ${specials}
+      <p>REVIEWS:</p><br>
+      ${reviews}
+      <p>Rating: ${cur.rating}</p><br>`
       // var markerContent = '<info-window-directive name="cur.RecAreaName" description="cur.RecAreaDescription"></info-window-directive>'
       var curInfoWindow = new google.maps.InfoWindow({
         content: markerContent
-        
+
       })
 
       var image =  'https://cdn2.iconfinder.com/data/icons/snipicons/5000/glass-32.png'
