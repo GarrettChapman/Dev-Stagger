@@ -13,7 +13,27 @@
 
 
 
-<h1 class="header" >Specials</h1>
+<br>
+<h1 class="specials_header">Happy Hour Specials</h1>
+<h2>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . </h2><br><br>
+
+<!-- <div class="specials_beer">
+
+<span ><img src="https://cdn2.iconfinder.com/data/icons/drink-and-beverages-1/128/Drink-04-32.png" alt=""></span>
+<span ><img src="https://cdn2.iconfinder.com/data/icons/drink-and-beverages-1/128/Drink-04-32.png" alt=""></span>
+<span ><img src="https://cdn2.iconfinder.com/data/icons/drink-and-beverages-1/128/Drink-04-32.png" alt=""></span>
+<span ><img src="https://cdn2.iconfinder.com/data/icons/drink-and-beverages-1/128/Drink-04-32.png" alt=""></span>
+<span ><img src="https://cdn2.iconfinder.com/data/icons/drink-and-beverages-1/128/Drink-04-32.png" alt=""></span>
+<span ><img src="https://cdn2.iconfinder.com/data/icons/drink-and-beverages-1/128/Drink-04-32.png" alt=""></span>
+<span ><img src="https://cdn2.iconfinder.com/data/icons/drink-and-beverages-1/128/Drink-04-32.png" alt=""></span>
+<span ><img src="https://cdn2.iconfinder.com/data/icons/drink-and-beverages-1/128/Drink-04-32.png" alt=""></span>
+<span ><img src="https://cdn2.iconfinder.com/data/icons/drink-and-beverages-1/128/Drink-04-32.png" alt=""></span>
+<span ><img src="https://cdn2.iconfinder.com/data/icons/drink-and-beverages-1/128/Drink-04-32.png" alt=""></span>
+<span ><img src="https://cdn2.iconfinder.com/data/icons/drink-and-beverages-1/128/Drink-04-32.png" alt=""></span>
+</div> -->
+
+
+
 
 
 <!-- <div ui-grid="{ data: myData.bar_name }" class="myGrid"></div> -->
@@ -22,15 +42,15 @@
 
 <div class="divScroll">
   <ul ng-repeat="data in myData">
-    <h1>{{data.bar_name}}</h1><br>
+    <h1 class='specials_style'>{{data.bar_name}}</h1><br>
     <!-- <button ui-sref='moreInfo({id:data.bar_id})' class="" name="button" placeholder=>Location</button><br> -->
-      <li ng-repeat="special in data.specials">{{special}}</li><br>
-      <!-- <li>{{data.review}}</li><br> -->
-     <button ui-sref='moreInfo({id:data.bar_id})' class="button" name="button" placeholder=>-Location-</button><br><br><br>
-     <!-- <button ui-sref='moreInfo({id:data.bar_id})' class="button" name="button" placeholder=>-Add Review-</button> -->
+    <li ng-repeat="special in data.specials">{{special}}</li><br>
+    <!-- <li>{{data.review}}</li><br> -->
+    <button ui-sref='moreInfo({id:data.bar_id})' class="button" name="button" placeholder=>-Location-</button><br><br><br>
+
     <br>
     <br>
-    <br>
-    
+
+
   </ul>
 </div>

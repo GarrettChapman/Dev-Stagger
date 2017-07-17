@@ -14,7 +14,25 @@ body {
   overflow: hidden;
 }
 
+.landing_header {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  /*color: #E0B468;*/
+  /*border-bottom: 2px solid #E0B468;*/
+  color: #9C0500;
+  font-size: 4em;
+  list-style: none;
+  padding-top: 7%;
+  padding-bottom: 2%;
+  -webkit-text-stroke: 2px #E0B468;
+  position: center;
+  text-shadow: 9px 9px 9px black;
+  font-family: 'Contrail One';
+}
+
 .header {
+  font-style: oblique;
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -27,7 +45,34 @@ body {
   padding-bottom: 2%;
   -webkit-text-stroke: 2px #E0B468;
   position: center;
-  text-shadow: 9px 9px 9px black;
+  /*text-shadow: 9px 9px 9px black;*/
+}
+
+.specials_beer {
+position: center;
+padding-left: 35%;
+padding-right: 20%;
+
+
+}
+
+.specials_header{
+  /*font-family: 'Contrail One';*/
+  font-family: 'Limelight';
+  /*font-family: 'Vast Shadow';*/
+  color: #9C0500;
+  /*-webkit-text-stroke: 1px #E0B468;*/
+  padding-top: 6%;
+  position: center;
+  text-align: center;
+  font-size: 5em;
+  text-shadow:
+       1px  1px     black,
+      -1px  1px     #E0B468,
+       1px -1px     black,
+      -1px -1px     #E0B468,
+       1px  1px 5px #E0B468;
+
 }
 
 .nav {
@@ -44,7 +89,6 @@ body {
 
 .button {
   position: relative;
-  font-family: serif;
   background-color: Transparent;
   border-radius: 10%;
   color: #F2B663;
@@ -55,20 +99,32 @@ body {
   /*transition: 2s;
   -webkit-transition: 2s;*/
   border-color: #F2B663;
+  font-family: 'Contrail One';
 }
 
-
 .location_button {
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   border-color: #E0B468;
   opacity: .6;
   color: #E0B468;
   font-size: 1.2em;
   list-style: none;
-
   -webkit-text-stroke: 2px #E0B468;
   position: center;
   /*text-shadow: 20px 20px 20px black;*/
+}
+
+.random_button {
+  font-family: 'Contrail One';
+  background-color: black;
+  border-color: #E0B468;
+  opacity: .8;
+  color: #9C0500;
+  font-size: 1.4em;
+  list-style: none;
+  -webkit-text-stroke: .3px #E0B468;
+
+
 }
 
 .enter_button {
@@ -76,9 +132,10 @@ body {
   display: flex;
   justify-content: center;
   background-image: image('https://cdn2.iconfinder.com/data/icons/snipicons/5000/glass-32.png');
-  padding-top: 2%;
+  padding-top: 1%;
   border-radius: 7%;
   opacity: 0.8;
+  font-family: 'Contrail One';
 }
 
 #map_container {
@@ -110,6 +167,20 @@ body {
   border: 2px solid #E0B468;*/
 }
 
+.specials_style {
+  font-family: 'Contrail One';
+  text-shadow:
+       1px  1px     #E0B468,
+      -1px  1px     #E0B468,
+       1px -1px     #E0B468,
+      -1px -1px     #E0B468,
+       1px  1px 5px #555;
+
+  position: center;
+  text-align: center;
+  font-size: 5em;
+}
+
 .submit_style {
   width: 20%;
   margin: 0 auto;
@@ -124,16 +195,14 @@ body {
 }
 
 input {
+  font-size: 12px;
   height: 140%;
   text-align: center;
-
-  transition: 2s;
-  -webkit-transition: 2s;
-  border-color: #86303C;
+  border-color: #D0A15C;
   /*outline-color: #86303C;*/
   /*box-shadow: 0 0 2pt 2pt #9C0500;*/
   opacity: .6;
-  outline-color: #F2B663;
+  outline-color: #340D00;
   box-shadow: 0 0 4pt 4pt #340D00;
   transition: 1s;
   -webkit-transition: 1s;
@@ -141,35 +210,48 @@ input {
 }
 
 textarea {
+  font-size: 12px;
   text-align: center;
   transition: 2s;
   -webkit-transition: 2s;
-  border-color: #86303C;
-  outline-color: ##340D00;
+  border-color: #D0A15C;
+  outline-color: #340D00;
   box-shadow: 0 0 4pt 4pt #340D00;
   opacity: .6;
 }
 
 p {
-
   color: #9C0500;
   -webkit-text-stroke: .7px black;
   position: center;
   text-align: center;
+  font-family: 'Contrail One';
 }
 
 h1 {
   color: #9C0500;
-  -webkit-text-stroke: 1px #E0B468;
+  /*color: white;*/
+  /*-webkit-text-stroke: 1px #E0B468;*/
   position: center;
   text-align: center;
+  font-family: 'Contrail One';
 }
 
 h2 {
   text-align: center;
   size: 50%;
   color: #9C0500;
-  -webkit-text-stroke: .7px #E0B468;
+  text-shadow:
+       1px  1px     #E0B468,
+      -1px  1px     #E0B468,
+       1px -1px     #E0B468,
+      -1px -1px     #E0B468,
+       1px  1px 5px #555;
+
+  position: center;
+  text-align: center;
+  font-family: 'Contrail One';
+}
 }
 
 h5 {
@@ -178,11 +260,20 @@ h5 {
   padding: px;
 }
 
+li {
+  font-family: 'Racing Sans One' ;
+  font-size: 1.8em;
+  color: #E0B468;
+  /*-webkit-text-stroke: 1px #E0B468;*/
+  position: center;
+  text-align: center
+}
+
 .divScroll {
   position: center;
   margin: auto;
   width: 100vw;
-  height: 80vh;
+  height: 70vh;
   overflow: scroll;
   padding-bottom: ;
   text-align: center;
@@ -193,16 +284,8 @@ h5 {
   display: none
 }
 
-li {
-  font-size: 1.7em;
-  color: #9C0500;
-  -webkit-text-stroke: 1px #E0B468;
-  position: center;
-  text-align: center
-}
 
-
-
+/*
 .dropbtn {
 
     background-color: #4CAF50;
@@ -214,43 +297,56 @@ li {
 }
 
 /* The container <div> - needed to position the dropdown content */
+
 .dropdown {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
+
 
 /* Dropdown Content (Hidden by Default) */
+
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
+
 
 /* Links inside the dropdown */
+
 .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
+
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1
+}
+
 
 /* Show the dropdown menu on hover */
+
 .dropdown:hover .dropdown-content {
-    display: block;
+  display: block;
 }
+
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
+
 .dropdown:hover .dropbtn {
-    background-color: #3e8e41;
+  background-color: #3e8e41;
 }
 
-*/
+*/ */
 /*form {
   display: flex;
   justify-content: center;

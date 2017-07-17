@@ -1,4 +1,5 @@
 angular.module('myApp').controller('mapCtrl', function($scope, mapSrv, $stateParams) {
+  var bars;
   var weekdaySpecials = [{
     day: "Sun",
     special: "goodest drink"
@@ -192,6 +193,7 @@ var homeMarker = 'https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/compu
 if (!$stateParams.id){
   mapSrv.getYelpData().then(function(response) {
     console.log(response.data)
+    bars = response.data
     map(response.data)
   })
 }
@@ -203,5 +205,10 @@ else {
   })
 }
 
+$scope.getRandomBar = function() {
+  var random = Math.floor(Math.random() * bars.length)
+  var randomBar = bars.slice(random, random + 1)
+  map(randomBar)
+}
 
 });
