@@ -1,34 +1,5 @@
 angular.module('myApp').controller('mapCtrl', function($scope, mapSrv, $stateParams) {
   var bars;
-  var weekdaySpecials = [{
-    day: "Sun",
-    special: "goodest drink"
-  }, {
-    day: "Mon",
-    special: "it's ok"
-  }, {
-    day: "Tues",
-    special: "goodest drink"
-  }, {
-    day: "Wed",
-    special: "it's ok"
-  }, {
-    day: "Thurs",
-    special: "goodest drink"
-  }, {
-    day: "Fri",
-    special: "it's ok"
-  }]
-  var today = new Date().toString().split(" ")[0]
-
-
-
-
-  var todaySpecial = weekdaySpecials.find(function(cur, ind, arr) {
-    console.log(cur.day, today);
-    return cur.day == today
-  });
-  console.log(todaySpecial);
 
   $scope.test = 'Most Triumphant'
   // $scope.map = function(){
@@ -36,11 +7,8 @@ angular.module('myApp').controller('mapCtrl', function($scope, mapSrv, $statePar
   // }
   function map(response) {
     let center = {
-
-      // lat: response.region.center.latitude,
       lat: 32.777641,
-      lng: -96.795974
-      // lng: response.region.center.longitude
+      lng: -96.795974      
     }
 
     console.log(response);
