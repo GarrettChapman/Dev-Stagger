@@ -60,6 +60,8 @@ padding-right: 20%;
   /*font-family: 'Contrail One';*/
   font-family: 'Limelight';
   /*font-family: 'Vast Shadow';*/
+  /*background-color: rgba(32, 22, 22, .35);*/
+  background: linear-gradient(black, transparent);
   color: #9C0500;
   /*-webkit-text-stroke: 1px #E0B468;*/
   padding-top: 6%;
@@ -69,7 +71,7 @@ padding-right: 20%;
   text-shadow:
        1px  1px     black,
       -1px  3px     #E0B468,
-       1px -1px     black,
+       1px 1px     black,
       -1px -3px     #E0B468,
        1px  1px 5px #E0B468;
 
@@ -89,16 +91,31 @@ padding-right: 20%;
 
 .button {
   position: relative;
+  background-color: black;
+  border-radius: 10%;
+  color: #F2B663;
+  text-align: center;
+  /*opacity: .9;*/
+  font-size: 20px;
+  box-shadow: 0 0 1pt 1pt #F2B663;
+  transition: 2s;
+  -webkit-transition: 2s;
+  border-color: #F2B663;
+  font-family: 'Contrail One';
+}
+
+.navButton {
+  position: relative;
   background-color: Transparent;
   border-radius: 10%;
   color: #F2B663;
   text-align: center;
-  opacity: .9;
-  font-size: 16px;
-  box-shadow: 0 0 1pt 1pt #F2B663;
-  /*transition: 2s;
-  -webkit-transition: 2s;*/
-  border-color: #F2B663;
+  /*opacity: .9;*/
+  font-size: 35px;
+  /*box-shadow: 0 0 1pt 1pt #F2B663;*/
+  transition: 2s;
+  -webkit-transition: 2s;
+  /*border-color: #F2B663;*/
   font-family: 'Contrail One';
 }
 
@@ -131,10 +148,34 @@ padding-right: 20%;
   width: 100%;
   display: flex;
   justify-content: center;
-  background-image: image('https://cdn2.iconfinder.com/data/icons/snipicons/5000/glass-32.png');
-  padding-top: 1%;
   border-radius: 7%;
   opacity: 0.8;
+  font-family: 'Contrail One';
+}
+
+.enterButtonStyle {
+  position: relative;
+  background-color: transparent;
+  /*border-radius: 10%;*/
+  color: #F2B663;
+  text-align: center;
+  /*opacity: .9;*/
+  font-size: 20px;
+  font-family: 'Contrail One';
+}
+
+.submit_button {
+  position: relative;
+  background-color: transparent;
+  /*border-radius: 60%;*/
+  color: #F2B663;
+  text-align: center;
+  /*opacity: .9;*/
+  font-size: 20px;
+  /*box-shadow: 0 0 1pt 1pt #F2B663;*/
+  transition: 2s;
+  -webkit-transition: 2s;
+  /*border-color: #F2B663;*/
   font-family: 'Contrail One';
 }
 
@@ -182,7 +223,8 @@ padding-right: 20%;
 }
 
 .submit_style {
-  width: 20%;
+  width: 25%;
+  height: 70vh;
   margin: 0 auto;
   position: center;
   display: grid;
@@ -192,6 +234,7 @@ padding-right: 20%;
 .submit_input {
   text: white;
   position: inherit;
+
 }
 
 input {
@@ -272,12 +315,13 @@ li {
 .divScroll {
   position: center;
   margin: auto;
-  width: 100vw;
+  width: 70vw;
   height: 70vh;
   overflow: scroll;
   padding-bottom: ;
   text-align: center;
   scroll-behavior: smooth;
+  text-shadow: 2px 2px 2px black;
 }
 
 ::-webkit-scrollbar {
