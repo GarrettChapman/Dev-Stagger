@@ -7,7 +7,7 @@ var massive = require('massive')
 var {
   json
 } = require('body-parser')
-var port = 8080
+var port = process.env.PORT || 3000;
 var app = express()
 const yelp = axios.create({
   baseURL: 'https://api.yelp.com/v3/businesses'
